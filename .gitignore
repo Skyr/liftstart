@@ -19,6 +19,12 @@ derby.log
 .manager
 .scala_dependencies
 
+# idea conf file
+.idea
+*.iml
+*.ipr
+*.iws
+
 # building
 target
 build

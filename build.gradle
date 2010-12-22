@@ -4,6 +4,7 @@ apply {
     plugin 'war'
     plugin 'jetty'
     plugin 'eclipse'
+    plugin 'idea'
 }
 
 scalaVersion = '2.8.0'

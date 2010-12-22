@@ -7,9 +7,18 @@ apply {
     plugin 'idea'
 }
 
-scalaVersion = '2.8.0'
-liftVersion = '2.1-RC1'
-specsVersion = scalaVersion.startsWith("2.8") ? "1.6.5" : "1.6.1"
+scalaVersion = '2.8.1'
+liftVersion = '2.2-RC4'
+switch (scalaVersion) {
+    case '2.8.1':
+        specsVersion = '1.6.6'
+        break
+    case '2.8.0':
+        specsVersion = '1.6.5'
+        break
+    default:
+        specsVersion = '1.6.1'
+}
 
 jettyRun.contextPath = "/"
 compileScala.scalaCompileOptions.optimize = true // Need this for Scala 2.8.0
